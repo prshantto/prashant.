@@ -34,9 +34,9 @@ function Sidebar({ isOpen, onToggle }) {
           <nav className="space-y-4">
             <ul className="nav-links">
               <li onClick={() => navigate("/")}>Home</li>
-              <li onClick={() => navigate("/about")}>About</li>
               <li onClick={() => navigate("/projects")}>Projects</li>
-              <li onClick={() => navigate("/articles")}>Articles</li>
+              <li onClick={() => navigate("/blogs")}>Blogs</li>
+              <li onClick={() => navigate("/about")}>About</li>
               <li onClick={() => navigate("/contact")}>Contact</li>
             </ul>
 
@@ -71,10 +71,7 @@ function Sidebar({ isOpen, onToggle }) {
         </div>
 
         <div className="nav-footer text-sm text-gray-500 text-center">
-          <button
-            className="bg-gray-900 text-white px-4 py-2 rounded-full mb-4"
-            onClick={() => navigate("/resume")}
-          >
+          <button className="resume-button" onClick={() => navigate("/resume")}>
             Read Resume
           </button>
           <p>Copyright © 2025</p>

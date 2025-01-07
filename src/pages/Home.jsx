@@ -6,8 +6,8 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="background w-[79%] h-screen bg-[url(/src/assets/images/bg_1.jpg)] bg-cover bg-center relative">
-      <div className="overlay absolute inset-0 bg-black/50">
+    <div className="background w-full h-[120vh] lg:w-[79%] lg:h-screen  bg-[url(/src/assets/images/bg_1.jpg)] bg-cover bg-center relative">
+      <div className="overlay absolute inset-0 bg-black/40">
         <div className="w-full p-8 max-w-[70rem] mx-auto text-center">
           <div className="mb-8">
             <img
