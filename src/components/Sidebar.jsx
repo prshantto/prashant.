@@ -1,6 +1,8 @@
 import React from "react";
 import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import Resume from "./Resume";
+
 import "../styles/sidebar.css";
 
 function Sidebar({ isOpen, onToggle }) {
@@ -69,6 +71,12 @@ function Sidebar({ isOpen, onToggle }) {
         </div>
 
         <div className="nav-footer text-sm text-gray-500 text-center">
+          <button
+            className="bg-gray-900 text-white px-4 py-2 rounded-full mb-4"
+            onClick={() => navigate("/resume")}
+          >
+            Read Resume
+          </button>
           <p>Copyright © 2025</p>
           <p>All rights reserved</p>
           <p>
