@@ -12,11 +12,10 @@ function App() {
 
   return (
     <div className="flex min-h-screen bg-gray-50 items-center">
-      {/* <Sidebar
+      <Sidebar
         isOpen={isSidebarOpen}
         onToggle={() => setIsSidebarOpen(!isSidebarOpen)}
-      /> */}
-      <Sidebar />
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
