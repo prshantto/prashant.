@@ -1,16 +1,48 @@
 .nav-links {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-links li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  color: #6d6d6d;
   cursor: pointer;
-  text-align: center;
   margin: 0.5rem 0;
   font-size: 1rem;
   font-weight: 600;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.5px;
+  bottom: 0;
+  left: 50%;
+  background-color: #282828;
+  transition: all 0.15s ease-in-out;
+}
+
+.nav-links li:hover {
+  color: #282828;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+  font-weight: 700;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-links li.active {
+  color: #282828;
+}
+
+.nav-links li.active::after {
+  width: 100%;
+  left: 0;
 }

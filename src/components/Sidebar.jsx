@@ -1,16 +1,5 @@
 import React from "react";
-import {
-  Home,
-  User,
-  FolderKanban,
-  FileText,
-  Mail,
-  Twitter,
-  Linkedin,
-  Github,
-  Menu,
-  X,
-} from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import "../styles/sidebar.css";
 
@@ -18,10 +7,10 @@ function Sidebar({ isOpen, onToggle }) {
   const navigate = useNavigate();
   return (
     <>
-      {/* Mobile menu button */}
+      {/* Mobile menu Button */}
       <button
         onClick={onToggle}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-gray-900 text-white"
+        className="lg:hidden fixed top-4 right-4 z-50 p-2 rounded-md bg-gray-900 text-white"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
@@ -29,7 +18,7 @@ function Sidebar({ isOpen, onToggle }) {
       {/* Sidebar */}
       <aside
         className={`
-  fixed left-0 top-0 h-screen w-64 md:static md:w-80 bg-white p-8 flex flex-col justify-between
+  fixed left-0 top-0 h-screen w-64 md:static md:w-80 bg-[#f5f5f5] p-8 flex flex-col justify-between
   transform transition-transform duration-300 ease-in-out z-40
   lg:translate-x-0
   ${isOpen ? "translate-x-0" : "-translate-x-full"}
@@ -42,61 +31,34 @@ function Sidebar({ isOpen, onToggle }) {
 
           <nav className="space-y-4">
             <ul className="nav-links">
-              <li onClick={() => navigate("/")}>
-                {" "}
-                <Home size={20} /> Home
-              </li>
-              <li onClick={() => navigate("/about")}>
-                {" "}
-                <User size={20} /> About
-              </li>
-              <li onClick={() => navigate("/projects")}>
-                {" "}
-                <FolderKanban size={20} /> Projects
-              </li>
-              <li onClick={() => navigate("/articles")}>
-                {" "}
-                <FileText size={20} /> Articles
-              </li>
-              <li onClick={() => navigate("/contact")}>
-                {" "}
-                <Mail size={20} /> Contact
-              </li>
+              <li onClick={() => navigate("/")}>Home</li>
+              <li onClick={() => navigate("/about")}>About</li>
+              <li onClick={() => navigate("/projects")}>Projects</li>
+              <li onClick={() => navigate("/articles")}>Articles</li>
+              <li onClick={() => navigate("/contact")}>Contact</li>
             </ul>
 
             <div className="pt-6 text-center">
-              <h2 className="text-md font-medium text-gray-400 mb-4">
-                Socials
+              <h2 className="text-xl font-bold mb-4">
+                socials<span className="text-gray-500 text-3xl">.</span>
               </h2>
               <div className="space-y-4">
                 <ul className="nav-links">
                   <li>
-                    <Linkedin size={20} />
                     <a
                       href="https://www.linkedin.com/in/prashant-singh-5a2b7128b/"
                       target="_blank"
-                      rel="noopener noreferrer"
                     >
                       LinkedIn
                     </a>
                   </li>
                   <li>
-                    <Twitter size={20} />
-                    <a
-                      href="https://x.com/prshantto"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href="https://x.com/prshantto" target="_blank">
                       Twitter
                     </a>
                   </li>
                   <li>
-                    <Github size={20} />
-                    <a
-                      href="https://github.com/prshantto"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href="https://github.com/prshantto" target="_blank">
                       Github
                     </a>
                   </li>
@@ -148,13 +110,13 @@ export default Sidebar;
 //   const navigate = useNavigate();
 //   return (
 //     <>
-//       {/* Mobile menu button */}
-//       <button
+//       {/* Mobile menu li */}
+//       <li
 //         onClick={onToggle}
 //         className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-gray-900 text-white"
 //       >
 //         {isOpen ? <X size={24} /> : <Menu size={24} />}
-//       </button>
+//       </li>
 //       <div
 //         className={`fixed w-64 md:static md:w-80 h-screen bg-gray-800 text-white transform transition-transform duration-300 ease-in-out z-40 lg:translate-x-0 ${
 //           isOpen ? "translate-x-0" : "-translate-x-full"
@@ -165,7 +127,7 @@ export default Sidebar;
 //         </h1>
 
 //         <nav className="space-y-4 grid gap-10 justify-around">
-//           <ul className="nav-links">
+//           <div className="nav-links">
 //             <li onClick={() => navigate("/")}>
 //               {" "}
 //               <Home size={20} /> Home
@@ -186,11 +148,11 @@ export default Sidebar;
 //               {" "}
 //               <Mail size={20} /> Contact
 //             </li>
-//           </ul>
+//           </div>
 //           <div className="pt-6 text-center">
 //             <h2 className="text-md font-medium text-gray-400 mb-4">Socials</h2>
 //             <div className="space-y-4">
-//               <ul className="nav-links">
+//               <div className="nav-links">
 //                 <li>
 //                   <Linkedin size={20} />
 //                   <a
@@ -221,7 +183,7 @@ export default Sidebar;
 //                     Github
 //                   </a>
 //                 </li>
-//               </ul>
+//               </div>
 //             </div>
 //           </div>
 //           <div className="text-sm text-gray-500 text-center">
