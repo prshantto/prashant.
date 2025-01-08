@@ -2,8 +2,7 @@ import React from "react";
 import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Resume from "./Resume";
-
-import "../styles/sidebar.css";
+import "./Sidebar.css";
 
 function Sidebar({ isOpen, onToggle }) {
   const navigate = useNavigate();
@@ -72,7 +71,7 @@ function Sidebar({ isOpen, onToggle }) {
 
         <div className="nav-footer text-sm text-gray-500 text-center">
           <button className="resume-button" onClick={() => navigate("/resume")}>
-            Read Resume
+            resume<span className="text-gray-500 text-3xl">.</span>
           </button>
           <p>Copyright © 2025</p>
           <p>All rights reserved</p>

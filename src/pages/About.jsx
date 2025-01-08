@@ -2,9 +2,9 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="w-full min-h-screen lg:w-[79%] bg-[url(/src/assets/images/bg_1.jpg)] bg-cover bg-center ">
-      <div className="text-base md:text-xl text-center  inset-0 bg-black/80 text-gray-200 flex flex-col justify-center items-center gap-0.5 p-4 md:px-16 overflow-y-auto">
-        <h1 className="text-3xl font-bold flex items-center md:mb-4">
+    <div className="lg:w-[79%] bg-[url(/src/assets/images/bg_1.jpg)] bg-cover bg-center ">
+      <div className="text-base md:text-xl text-center  inset-0 bg-black/80 text-gray-200 flex flex-col justify-center items-center gap-0.5 p-4 md:px-16 h-screen w-full min-h-screen overflow-y-auto">
+        <h1 className="text-3xl font-bold flex items-center mt-48 mb-5 md:mt-32 md:mb-4">
           <img
             src="/src/assets/images/profile.jpg"
             className="w-12 h-12 md:w-16 md:h-16 rounded-full mr-5"
